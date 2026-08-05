@@ -1,7 +1,7 @@
 # CSP-451 GitHub Actions Seed Repo
 
-![CI](https://github.com/OWNER/REPO/actions/workflows/ci.yml/badge.svg?branch=main)
-![CodeQL](https://github.com/OWNER/REPO/actions/workflows/codeql.yml/badge.svg?branch=main)
+![CI](https://github.com/chshin9/CSP451-CheckPoint3-cshin9/actions/workflows/ci.yml/badge.svg?branch=main)
+![CodeQL](https://github.com/chshin9/CSP451-CheckPoint3-cshin9/actions/workflows/codeql.yml/badge.svg?branch=main)
 
 Seed repository for the GitHub Actions CI/CD CheckPoint in CSP-451 — Computer Systems
 Projects. The pipeline lints, formats, tests with coverage thresholds, runs `npm audit`,
@@ -71,3 +71,22 @@ Students will:
 4. Confirm the CI, CodeQL, and Dependabot configurations all behave correctly on the PR.
 5. Drive a red-then-green debug cycle and capture it on the PR timeline.
 6. Configure branch protection so the CI checks gate every merge to `main`.
+
+## Health Endpoint
+
+The application includes a health-check endpoint for CI/CD and monitoring.
+
+### `GET /health`
+
+Returns a JSON response showing that the service is healthy.
+
+Example response:
+
+```json
+{
+  "status": "healthy",
+  "uptime": 12.34
+}
+```
+
+The `uptime` value is generated with `process.uptime()` and returns the number of seconds the Node.js process has been running.
